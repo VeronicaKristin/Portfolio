@@ -58,6 +58,9 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	border: 3px solid #14ffec;
+	border-radius: 8px;
+	border-spacing: 10px;
 }
 
 .button {
@@ -85,7 +88,15 @@ p {
 	display: flex;
 	flex-direction: column;
 }
-
+.divider {
+	width: 5px;
+	height: 5px;
+	display: flex;
+}
+.contact a {
+	text-decoration: none;
+	color: #14ffec;
+}
 footer {
 	background-color: #323232;
 	color: #0d7377;
