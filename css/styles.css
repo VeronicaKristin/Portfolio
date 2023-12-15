@@ -4,10 +4,13 @@ body {
 	padding: 0;
 	box-sizing: border-box;
 	background-color: #212121;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 20px;
 }
@@ -43,9 +46,12 @@ p {
 
 .projects {
 	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	overflow: hidden;
 	display: grid;
-	grid-template-columns: repeat(3, 33%);
-	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
 	min-height: 400px;
 }
 
@@ -57,10 +63,20 @@ p {
 .projects-content {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+	justify-content: space-evenly;
+}
+
+.border {
 	border: 3px solid #14ffec;
 	border-radius: 8px;
-	border-spacing: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	justify-content: space-evenly;
 }
 
 .button {
@@ -103,9 +119,13 @@ footer {
 	text-align: center;
 	padding: 10px 0;
 }
-
+@media (max-width: 900px) {
+	.projects {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
 @media (max-width: 600px) {
 	.projects {
-		grid-template-columns: repeat(1, 100%);
+		grid-template-columns: repeat(1, 1fr);
 	}
 }
